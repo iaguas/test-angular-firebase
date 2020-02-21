@@ -1,5 +1,9 @@
 {
   "hosting": {
+    "site": [
+      "test-angular-firebase-e3db2",
+      "beta-test-angular-firebase"
+    ],
     "public": "dist",
     "ignore": [
       "firebase.json",
