@@ -12,8 +12,8 @@ before_script:
 script:
   - ng build --prod
 after_success:
-  - test $TRAVIS_BRANCH = "master" && firebase deploy --token $FIREBASE_TOKEN --only hosting:angular-firebase-test
-  - test $TRAVIS_BRANCH = "dev" && firebase deploy --token $FIREBASE_TOKEN --only hosting:beta-angular-firebase-test
+  - test $TRAVIS_BRANCH = "master" && firebase deploy --token $FIREBASE_TOKEN --only hosting:test-angular-firebase-e3db2
+  - test $TRAVIS_BRANCH = "dev" && firebase deploy --token $FIREBASE_TOKEN --only hosting:beta-test-angular-firebase
 notifications:
   email:
     recipients:
