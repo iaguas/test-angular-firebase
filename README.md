@@ -1,6 +1,10 @@
+[![Build Status](https://travis-ci.org/iaguas/test-angular-firebase.svg?branch=master)](https://travis-ci.org/iaguas/test-angular-firebase)
+
 # TestAngularFirebase
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.1.
+
+It's a test of hosting at [firebase.com](https://angular-firebase.test.electroaguas.tools) and CI with travis.
 
 ## Development server
 
