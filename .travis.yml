@@ -11,12 +11,19 @@ before_script:
   - npm install -g @angular/cli
 script:
   - ng build --prod
-after_success:
-  - test $TRAVIS_BRANCH = "master" && echo master && firebase deploy --token $FIREBASE_TOKEN --only hosting:test-angular-firebase-e3db2
-  - test $TRAVIS_BRANCH = "dev" && echo dev && firebase deploy --token $FIREBASE_TOKEN --only hosting:beta-test-angular-firebase
+deploy:
+  - provider: firebase
+    token: $FIREBASE_TOKEN
+    project: test-angular-firebase-e3db2
+    on:
+      branch: master
+      tags: true
+#after_success:
+#  - test $TRAVIS_BRANCH = "master" && echo master && firebase deploy --token $FIREBASE_TOKEN --only hosting:test-angular-firebase-e3db2
+#  - test $TRAVIS_BRANCH = "dev" && echo dev && firebase deploy --token $FIREBASE_TOKEN --only hosting:beta-test-angular-firebase
 notifications:
   email:
     recipients:
-      - electroaguas@hotmail.com
+      $NOTIFICATION_EMAIL
     on_failure: always
     on_success: always
