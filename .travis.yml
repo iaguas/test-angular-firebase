@@ -13,9 +13,10 @@ script:
   - ng build --prod
 deploy:
   - provider: firebase
+    skip_cleanup: true
     token:
       secure: $FIREBASE_TOKEN
-    project: test-angular-firebase-e3db2
+    project: "test-angular-firebase-e3db2"
     on:
       branch: master
 #      tags: true
