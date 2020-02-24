@@ -1,6 +1,7 @@
 {
   "projects": {
+    "default": "test-angular-firebase-beta",
+    "beta": "test-angular-firebase-beta",
     "prod": "test-angular-firebase-e3db2"
-    "beta": "test-angular-firebase-beta"
   }
 }

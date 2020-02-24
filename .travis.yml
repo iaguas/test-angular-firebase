@@ -15,7 +15,7 @@ deploy:
   - provider: firebase
     skip_cleanup: true
     token:
-      secure: $FIREBASE_TOKEN
+      secure: $FIREBASE_TOKEN_PROD
     project: "test-angular-firebase-e3db2"
     on:
       branch: master
@@ -23,7 +23,7 @@ deploy:
   - provider: firebase
     skip_cleanup: true
     token:
-      secure: $FIREBASE_TOKEN
+      secure: $FIREBASE_TOKEN_DEV
     project: "test-angular-firebase-beta"
     on:
       branch: dev
