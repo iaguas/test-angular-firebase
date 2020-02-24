@@ -13,7 +13,8 @@ script:
   - ng build --prod
 deploy:
   - provider: firebase
-    token: $FIREBASE_TOKEN
+    token:
+      secure: $FIREBASE_TOKEN
     project: test-angular-firebase-e3db2
     on:
       branch: master
@@ -24,6 +25,6 @@ deploy:
 notifications:
   email:
     recipients:
-      $NOTIFICATION_EMAIL
+      - $NOTIFICATION_EMAIL
     on_failure: always
     on_success: always
